@@ -1,5 +1,5 @@
-Link of Deployed website:- https://lms-assigment.web.app/
-ADMIN ID:- vikrantkumar@gmail.com
+Link of Deployed website:- https://lms-assigment.web.app/  <br>
+ADMIN ID:- vikrantkumar@gmail.com  <br>
 Password:- 123456
 
 <br>

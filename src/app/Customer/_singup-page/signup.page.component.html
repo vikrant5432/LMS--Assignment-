@@ -1,0 +1,65 @@
+<!-- <mat-toolbar color="primary">
+  LMS-(Laundary Management Service)
+  <button mat-button [routerLink]="['/login']">
+    <mat-icon>login</mat-icon>
+    Login
+  </button>
+</mat-toolbar> -->
+<div class="form-container div-margin mat-elevation-z5">
+  <form [formGroup]="signForm" (ngSubmit)="signUp()">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Name"
+        type="text"
+        formControlName="username"
+      />
+      <mat-error *ngIf="username?.errors?.['required']">
+        UserName is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email Address"
+        type="mail"
+        formControlName="usermail"
+      />
+      <mat-error *ngIf="usermail?.errors?.['required']">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="usermail?.errors?.['email']">
+        Please enter the correct email Format
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Mobile Number"
+        type="tel"
+        formControlName="usermobile"
+      />
+      <mat-error *ngIf="usermobile?.errors?.['required']">
+        Mobile Number is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
+        formControlName="userpassword"
+      />
+      <mat-error *ngIf="userpassword?.errors?.['required']">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+    <div class="center margin-top">
+      <button mat-raised-button color="primary" type="submit">SignUp</button>
+    </div>
+    <span class="center margin-top"
+      >Already SignUp?
+      <a [routerLink]="['/login']" class="sign-up-link">LogIn!</a></span
+    >
+  </form>
+</div>

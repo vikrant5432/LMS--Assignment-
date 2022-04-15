@@ -1,0 +1,49 @@
+<!-- <mat-toolbar color="primary">
+  LMS-(Laundary Management Service)
+
+  <button mat-button [routerLink]="['/admin-login']">
+    <mat-icon>admin</mat-icon>
+    Admin
+  </button>
+  <button mat-button [routerLink]="['/login']">
+    <mat-icon>login</mat-icon>
+    Login
+  </button>
+</mat-toolbar> -->
+
+<div class="form-container div-margin mat-elevation-z5">
+  <form [formGroup]="loginForm" (ngSubmit)="Login()">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email Address"
+        type="mail"
+        formControlName="usermail"
+      />
+      <mat-error *ngIf="usermail?.errors?.['required']">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="usermail?.errors?.['email']">
+        Please enter the correct email Format
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
+        formControlName="userpassword"
+      />
+      <mat-error *ngIf="userpassword?.errors?.['required']">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+    <div class="center margin-top">
+      <button mat-raised-button color="primary" type="submit">Login</button>
+    </div>
+    <span class="center margin-top"
+      >New to Our Palform?
+      <a [routerLink]="['/signup']" class="sign-up-link">Sign Up!</a></span
+    >
+  </form>
+</div>

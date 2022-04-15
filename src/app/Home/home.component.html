@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  LMS-(Laundary Management Service)
+  <ng-container *ngIf="router !== '/login' && router !== '/signup'">
+    <button mat-raised-button color="warn" [routerLink]="['/admin-login']">
+      <mat-icon>login</mat-icon>
+      (For Admin)
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="user$ | async as user; else loginButton">
+    <button mat-button [mat-menu-trigger-for]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+      {{ user.username }}
+      <mat-icon>expand_more</mat-icon>
+    </button>
+  </ng-container>
+
+  <ng-template #loginButton>
+    <button mat-button [routerLink]="['/login']">
+      <mat-icon>login</mat-icon>
+      Login
+    </button>
+  </ng-template>
+</mat-toolbar>
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item (click)="logOut()">LogOut</button>
+</mat-menu>

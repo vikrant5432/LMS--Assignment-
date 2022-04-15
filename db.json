@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "sigupUsers": [
+    {
+      "username": "vikrant",
+      "usermobile": "1234567890",
+      "usermail": "18BCS4283@gmail.com",
+      "userpassword": "1234",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

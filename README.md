@@ -1,3 +1,10 @@
+Link of Deployed website:- https://lms-assigment.web.app/
+ADMIN ID:- vikrantkumar@gmail.com
+Password:- 123456
+
+<br>
+<br>
+
 # FinalProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.

@@ -14,7 +14,7 @@ import { UserService } from '../_services/user.service';
 })
 export class homeComponent {
   user$ = this.userService.currentUserProfile$;
-  router!: any;
+  router!: string;
   constructor(
     private authService: AuthenticationService,
     private _router: Router,

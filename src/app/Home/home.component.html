@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   LMS-(Laundary Management Service)
-  <ng-container *ngIf="router !== '/login' && router !== '/signup'">
+  <ng-container *ngIf="router !== '/login' && router !== '/signup' && router.includes('user-dashboard') !== true">
     <button mat-raised-button color="warn" [routerLink]="['/admin-login']">
       <mat-icon>login</mat-icon>
       (For Admin)

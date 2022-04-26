@@ -23,7 +23,7 @@ export class ProductService {
   }
   addProduct(product: any) {
     const dbGetData = collection(this.firestore, 'products');
-    return addDoc(dbGetData, product);
+    return addDoc(dbGetData, product);  
   }
 
   FindProduct(userid: any) {
